@@ -1630,8 +1630,6 @@ class Suite(object):
         if factor_x != 1:
             suite.period_bound = [p * factor_x for p in self.period_bound]
             suite.period_samples = self.period_samples * factor_x
-        if factor_y != 1:
-            suite.factors = [f*factor_y for f in self.factors]
         suite.reset_spectrum_matrix()
         return suite
 
@@ -2007,4 +2005,4 @@ class Suite(object):
         -------
         `suite` : `Suite`
         '''
-        return Suite.read_dict(self.to_dict())
+        return Suite.read_dict(self.to_dict(separate_motion=False))
