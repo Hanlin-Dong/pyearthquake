@@ -1740,7 +1740,7 @@ class Suite(object):
         config += &#39;}\n\n&#39;
         for i, mo in enumerate(self.motions):
             mo.write_accel(f&#39;{folder}/{mo.name}&#39;, time=False)
-            config += f&#39;dict set motion {mo.name} path {folder}/{mo.name}.acc\n&#39;
+            config += f&#39;dict set motion {mo.name} path {folder}/{mo.name}\n&#39;
             config += f&#39;dict set motion {mo.name} npts {len(mo.accel)}\n&#39;
             config += f&#39;dict set motion {mo.name} dt {mo.dt:.4f}\n&#39;
             config += f&#39;dict set motion {mo.name} amp {self.factors[i]:.4f}\n\n&#39;
@@ -5487,7 +5487,7 @@ The matching period boundaries.</p></section>
         config += &#39;}\n\n&#39;
         for i, mo in enumerate(self.motions):
             mo.write_accel(f&#39;{folder}/{mo.name}&#39;, time=False)
-            config += f&#39;dict set motion {mo.name} path {folder}/{mo.name}.acc\n&#39;
+            config += f&#39;dict set motion {mo.name} path {folder}/{mo.name}\n&#39;
             config += f&#39;dict set motion {mo.name} npts {len(mo.accel)}\n&#39;
             config += f&#39;dict set motion {mo.name} dt {mo.dt:.4f}\n&#39;
             config += f&#39;dict set motion {mo.name} amp {self.factors[i]:.4f}\n\n&#39;
@@ -7244,7 +7244,7 @@ The tcl file name. If is None, use <a title="pyearthquake.Suite.name" href="#pye
     config += &#39;}\n\n&#39;
     for i, mo in enumerate(self.motions):
         mo.write_accel(f&#39;{folder}/{mo.name}&#39;, time=False)
-        config += f&#39;dict set motion {mo.name} path {folder}/{mo.name}.acc\n&#39;
+        config += f&#39;dict set motion {mo.name} path {folder}/{mo.name}\n&#39;
         config += f&#39;dict set motion {mo.name} npts {len(mo.accel)}\n&#39;
         config += f&#39;dict set motion {mo.name} dt {mo.dt:.4f}\n&#39;
         config += f&#39;dict set motion {mo.name} amp {self.factors[i]:.4f}\n\n&#39;

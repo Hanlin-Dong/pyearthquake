@@ -1663,7 +1663,7 @@ class Suite(object):
         config += '}\n\n'
         for i, mo in enumerate(self.motions):
             mo.write_accel(f'{folder}/{mo.name}', time=False)
-            config += f'dict set motion {mo.name} path {folder}/{mo.name}.acc\n'
+            config += f'dict set motion {mo.name} path {folder}/{mo.name}\n'
             config += f'dict set motion {mo.name} npts {len(mo.accel)}\n'
             config += f'dict set motion {mo.name} dt {mo.dt:.4f}\n'
             config += f'dict set motion {mo.name} amp {self.factors[i]:.4f}\n\n'
